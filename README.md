@@ -1,5 +1,5 @@
 # django-project-online-shop-
-A Simple Online shoppping project ,it is basically part of my learning.I have also used djangorestframework to get and post product Information (just to show a basic use of Django Rest Framework to create an api).
+A Simple Online shoppping project basically a part of my learning.I have also used djangorestframework to get and post product Information (just to show a basic use of Django Rest Framework to create an api).
 
 ## FUNCTIONALITIES
 ### Customer
