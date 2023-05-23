@@ -1,5 +1,5 @@
 # django-project-online-shop-
-A Simple Online shoppping project basically a part of my learning.I have also used djangorestframework to get and post product Information (just to show a basic use of Django Rest Framework to create an api).
+A Simple single vendor Online shoppping project basically a part of my learning.I have also used djangorestframework to get and post product Information (just to show a basic use of Django Rest Framework to create an api).
 
 ## FUNCTIONALITIES
 ### Customer
@@ -32,6 +32,8 @@ py manage.py createsuperuser
 * customer places order and admin deleted that user(fraud detection), then their orders will automatically deleted
 * suppose 1 customer places 4 products order and admin deleted 2 product from website, then that 2 product order will also be deleted and   other 2 will be their
 * If user click on purchase button without having products in their cart, then website will ask to add product in cart first.
+* Same Login page for Customer and Admin,so just by entering credentials they will be redirected to their respective dashboard.
+* Admin can be created onlyfrom cmd by creating superuser. 
 
 ## HOW TO RUN THIS PROJECT
 * Download This Project Zip Folder and Extract it
