@@ -34,21 +34,53 @@ py manage.py createsuperuser
 * If user click on purchase button without having products in their cart, then website will ask to add product in cart first.
 
 ## HOW TO RUN THIS PROJECT
-* Install Python(3.7.6) (Dont Forget to Tick Add to Path while installing Python)
-* Open Terminal and Execute Following Commands :
-``` 
-pip install -r requirement.txt 
-```
-
 * Download This Project Zip Folder and Extract it
 * Move to project folder in Terminal. Then run following Commands :
+``` 
+python -m venv <your venv name>
+<your venv name>\Scripts\activate
+pip install -r requirement.txt 
+```
 ``` 
 py manage.py makemigrations
 py manage.py migrate
 py manage.py runserver
 ```
+#### Note:- Python(latest) must be installed
 * Now enter following URL in Your Browser Installed On Your Pc
 http://127.0.0.1:8000/
+
+##### If you are getting error like
+```
+ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with LibreSSL 2.8.3. See: https://github.com/urllib3/urllib3/issues/2168
+``` 
+* just install this below and problem will be sorted then do migrations.
+```
+python3 -m pip install urllib3==1.26.6
+```
+* After this create superuser and add or manage products and customers.
+
+## How to use API 
+* The api here is a Self Describing API ,The documentation for each API endpoint can be provided simply by visiting the URL in your browser.
+* You can hover over Product view in Navbar and choose either to post products info or to get the posted ones.
+* To Post product info we need to go to post product option and enter data in json format ,
+* you can also visit
+```
+http://127.0.0.1:8000/postproduct/
+```
+* and add product info under following headings,
+```
+{
+        "name": "iphone",
+        "description": "an apple product",
+        "total_buyers": 15
+    }
+```
+* After this you can go to Get Product Option or just type this below in browser and you can access the data
+```
+http://127.0.0.1:8000/getproduct/
+```
+
 
 ## Some Drawbacks and issues
 * There are some more work needed in contact us form.
@@ -56,12 +88,5 @@ http://127.0.0.1:8000/
    * When user edit their profile then he/she must login again because their username/password is updated in db.
    * Popup of product is added to cart is shown when click on Ecommerce logo (soon will be fixed)
 
-## In case if the css not loading properly 
-* Run
-``` 
-pip install collectstatic
-```
-* but their must exist STATIC_ROOT in settings.py
-
 ### This Project is been created for learning purpose and i have created this by learning from various tutorials and videos.
-### There may be some functionalities may not working properly so this must not be used for real application.
+### There may be some functionalities not working properly so this must not be used for real application.
